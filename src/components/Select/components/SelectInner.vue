@@ -31,10 +31,7 @@
             :name="tagLabel[itemLabel]"
           />
           <span class="sb-select-inner__tag" :title="getTagTitle(tagLabel)">
-            <template v-if="showCaption">
-              {{ tagLabel[itemLabel] }} ({{ tagLabel[itemCaption] }})
-            </template>
-            <template v-else>{{ tagLabel[itemLabel] || tagLabel }}</template>
+            <template>{{ tagLabel[itemLabel] || tagLabel }}</template>
           </span>
         </template>
       </SbTag>
@@ -335,7 +332,7 @@ export default {
     isInnerSearchVisible() {
       return Boolean(
         !this.isTagsVisible &&
-          (this.filterable || this.placeholderLabel?.length)
+        (this.filterable || this.placeholderLabel?.length)
       )
     },
 
@@ -512,14 +509,7 @@ export default {
     },
 
     getTagTitle(tagLabel) {
-      const label = tagLabel[this.itemLabel] || tagLabel
-
-      if (this.showCaption) {
-        const caption = tagLabel[this.itemCaption]
-        return `${label} (${caption})`
-      }
-
-      return label
+      return tagLabel[this.itemLabel] || tagLabel
     },
   },
 }
