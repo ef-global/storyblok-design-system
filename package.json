@@ -8,13 +8,14 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib ./src/main.js",
+    "build": "yarn legacy vue-cli-service build --target lib ./src/main.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint src/ tests/ .storybook/",
     "lint:style": "stylelint 'src/**/*.{vue,scss}' --config ./.stylelintrc.json --fix",
     "build-storybook": "build-storybook",
     "storybook": "start-storybook -p 6006 --ci",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "legacy": "cross-env NODE_OPTIONS=--openssl-legacy-provider"
   },
   "main": "dist/storyblok-design-system.common.js",
   "dependencies": {
