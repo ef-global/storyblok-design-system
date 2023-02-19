@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex">
+  <div style="display: flex;">
     <div
       class="sb-editor-header__item"
       :class="{ 'sb-editor-header__separator': withSeparator }"
