@@ -1,5 +1,5 @@
 <template>
-  <Transition
+  <transition
     name="sb-accordion-transition"
     @before-enter="beforeEnter"
     @enter="enter"
@@ -8,15 +8,15 @@
     @leave="leave"
     @after-leave="afterLeave"
   >
-    <slot></slot>
-  </Transition>
+    <slot />
+  </transition>
 </template>
-
 <script>
 export default {
-  name: 'AccordionTransition',
-  setup() {
-    function beforeEnter(el) {
+  name: 'CollapseTransition',
+
+  methods: {
+    beforeEnter(el) {
       if (!el.dataset) el.dataset = {}
 
       el.dataset.oldPaddingTop = el.style.paddingTop
@@ -25,9 +25,9 @@ export default {
       el.style.maxHeight = 0
       el.style.paddingTop = 0
       el.style.paddingBottom = 0
-    }
+    },
 
-    function enter(el) {
+    enter(el) {
       el.dataset.oldOverflow = el.style.overflow
       if (el.scrollHeight !== 0) {
         el.style.maxHeight = `${el.scrollHeight}px`
@@ -40,14 +40,14 @@ export default {
       }
 
       el.style.overflow = 'hidden'
-    }
+    },
 
-    function afterEnter(el) {
+    afterEnter(el) {
       el.style.maxHeight = ''
       el.style.overflow = el.dataset.oldOverflow
-    }
+    },
 
-    function beforeLeave(el) {
+    beforeLeave(el) {
       if (!el.dataset) el.dataset = {}
       el.dataset.oldPaddingTop = el.style.paddingTop
       el.dataset.oldPaddingBottom = el.style.paddingBottom
@@ -55,30 +55,22 @@ export default {
 
       el.style.maxHeight = `${el.scrollHeight}px`
       el.style.overflow = 'hidden'
-    }
+    },
 
-    function leave(el) {
+    leave(el) {
       if (el.scrollHeight !== 0) {
         el.style.maxHeight = 0
         el.style.paddingTop = 0
         el.style.paddingBottom = 0
       }
-    }
+    },
 
-    function afterLeave(el) {
+    afterLeave(el) {
       el.style.maxHeight = ''
       el.style.overflow = el.dataset.oldOverflow
       el.style.paddingTop = el.dataset.oldPaddingTop
       el.style.paddingBottom = el.dataset.oldPaddingBottom
-    }
-    return {
-      beforeEnter,
-      enter,
-      afterEnter,
-      beforeLeave,
-      leave,
-      afterLeave,
-    }
+    },
   },
 }
 </script>

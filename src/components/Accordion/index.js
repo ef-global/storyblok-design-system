@@ -1,4 +1,4 @@
-import Accordion from './SbAccordion.vue'
+import Accordion from './Accordion.vue'
 
 import './accordion.scss'
 

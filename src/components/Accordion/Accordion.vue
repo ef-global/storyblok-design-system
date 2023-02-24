@@ -8,7 +8,12 @@
     >
       <SbIcon :name="chevronIcon" />
       <p class="sb-accordion__title">{{ title }}</p>
-
+      <div class="sb-accordion__additional-data">
+        <div class="sb-accordion__subtitle">
+          <slot v-if="subtitle" name="subtitle" />
+        </div>
+        <slot v-if="swatch" name="swatch" />
+      </div>
       <SbIcon
         v-if="icon"
         v-tooltip="{ label: iconDescription }"
@@ -43,6 +48,14 @@ export default {
   },
 
   props: {
+    swatch: {
+      type: Boolean,
+      defafult: false,
+    },
+    subtitle: {
+      type: Boolean,
+      defafult: false,
+    },
     icon: {
       type: String,
       default: null,
