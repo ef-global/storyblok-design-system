@@ -332,7 +332,7 @@ export default {
     isInnerSearchVisible() {
       return Boolean(
         !this.isTagsVisible &&
-        (this.filterable || this.placeholderLabel?.length)
+          (this.filterable || this.placeholderLabel?.length)
       )
     },
 

@@ -24,14 +24,14 @@
       </span>
 
       <span v-if="!showCaption" class="sb-select-list__item-name">{{
-          label
-        }}</span>
+        label
+      }}</span>
 
       <div v-else class="sb-select-list__item--with-path">
         <span class="sb-select-list__item-name">{{ label }}</span>
         <span v-if="showCaption" class="sb-select-list__item-caption">{{
-            path
-          }}</span>
+          path
+        }}</span>
       </div>
     </template>
   </li>
