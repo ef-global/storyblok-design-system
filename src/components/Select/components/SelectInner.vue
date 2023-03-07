@@ -239,9 +239,7 @@ export default {
       }
 
       if (this.showCaption && this.currentOptionValue) {
-        return `${this.currentOptionLabel} (${
-          this.currentOptionValue[this.itemCaption]
-        })`
+        return `${this.currentOptionLabel}`
       }
 
       if (this.inline) {
