@@ -113,13 +113,13 @@
 }
 
 @mixin selectedItem {
-  color: $sb-green;
+  color: var(--accent-color, var(--sb-green));;
   font-weight: $font-weight-medium;
 }
 
 @mixin focusedTextField {
   border-radius: 5px;
-  border-color: $sb-green;
+  border-color: var(--accent-color, var(--sb-green));;
   box-shadow: 0 0 0 3px $sb-green-25;
   outline: none;
 }

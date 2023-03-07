@@ -65,7 +65,7 @@
     text-align: center;
 
     span {
-      color: $sb-green;
+      color: var(--accent-color, var(--sb-green));;
       cursor: pointer;
 
       &:hover {

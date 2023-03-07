@@ -59,12 +59,12 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: $sb-green;
+    background-color: var(--accent-color, var(--sb-green));;
   }
 }
 
 .sb-tab:focus {
-  color: $sb-green;
+  color: var(--accent-color, var(--sb-green));;
 }
 
 .sb-tab--editable {

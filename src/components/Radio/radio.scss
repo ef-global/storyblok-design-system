@@ -70,8 +70,8 @@
     top: 0;
     width: 16px;
     height: 16px;
-    background-color: $sb-green;
-    border: 1px solid $sb-green;
+    background-color: var(--accent-color, var(--sb-green));;
+    border: 1px solid var(--accent-color, var(--sb-green));;
   }
 
   &::after {
