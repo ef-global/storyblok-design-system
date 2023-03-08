@@ -101,7 +101,7 @@
 
   &__save-button {
     margin-top: 10px;
-    color: $sb-green;
+    color: var(--accent-color, var(--sb-green));
     font-size: $font-14;
     font-weight: $font-weight-medium;
     background-color: $white;

@@ -73,7 +73,7 @@
   }
 
   &--loading .sb-select-inner__chevron {
-    color: $sb-green;
+    color: var(--accent-color, var(--sb-green));;
   }
 }
 
@@ -103,7 +103,7 @@
   cursor: pointer;
 
   &:hover {
-    border-color: $sb-green;
+    border-color: var(--accent-color, var(--sb-green));;
   }
 
   &:focus {
@@ -239,7 +239,7 @@
 .sb-select[aria-expanded='true'] .sb-select-inner--error,
 .sb-select:focus-within .sb-select-inner--error {
   border-color: $red;
-  box-shadow: 0 0 0 3px rgb(255 179 176 / 30%);
+  box-shadow: 0 0 0 3px var(--accent-color, rgb(255 179 176 / 30%));
   outline: none;
 }
 
@@ -310,7 +310,7 @@
   }
 
   &__create-label {
-    color: $sb-green;
+    color: var(--accent-color, var(--sb-green));;
   }
 
   &__create-value {

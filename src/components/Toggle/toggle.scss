@@ -11,7 +11,7 @@ $toggle-padding: 4px;
 }
 
 .sb-toggle--primary .sb-toggle__label {
-  background-color: $sb-green;
+  background-color: var(--accent-color, var(--sb-green));;
 }
 
 .sb-toggle--secondary .sb-toggle__label {

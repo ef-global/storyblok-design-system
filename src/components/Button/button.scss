@@ -35,14 +35,16 @@
 }
 
 .sb-button--primary {
-  background-color: $sb-green;
+  background-color: var(--accent-color, var(--sb-green));;
 
   &:focus {
     outline: 3px solid $sb-green-25;
   }
 
   &:hover:not([disabled]) {
-    background-color: darken($sb-green, 4%);
+    //background-color: darken($sb-green, 4%);
+    background-color: var(--accent-color, var(--sb-green));
+    filter: brightness(0.9);
   }
 }
 
@@ -226,6 +228,6 @@
 }
 
 .sb-button--primary-link {
-  color: $sb-green;
+  color: var(--accent-color, var(--sb-green));;
   background: transparent;
 }

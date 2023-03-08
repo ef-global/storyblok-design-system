@@ -64,7 +64,8 @@
   cursor: pointer;
 
   &:hover {
-    color: $sb-green;
+    color: var(--accent-color, var(--sb-green));
+    //color: $sb-green;
   }
 
   .sb-icon {

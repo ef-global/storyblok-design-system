@@ -89,12 +89,12 @@
       border: 1px solid $light;
 
       &:hover {
-        border-color: $sb-green;
+        border-color: var(--accent-color, var(--sb-green));;
       }
 
       &:focus {
         border-radius: 5px;
-        border-color: $sb-green;
+        border-color: var(--accent-color, var(--sb-green));;
         box-shadow: 0 0 0 3px $sb-green-25;
         outline: none;
       }
